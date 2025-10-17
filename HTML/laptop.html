@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Computadora</title>
+  <style>
+    body {
+      background: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: sans-serif;
+    }
+    .monitor {
+      width: 300px;
+      height: 180px;
+      background: linear-gradient(#1d5ea8, #5b9bd5);
+      border: 6px solid #111;
+      border-radius: 6px;
+      position: relative;
+    }
+    .base-monitor {
+      width: 100px;
+      height: 15px;
+      background: #111;
+      margin: 0 auto;
+    }
+    .soporte {
+      width: 40px;
+      height: 25px;
+      background: #333;
+      margin: 0 auto;
+    }
+    .cpu {
+      width: 120px;
+      height: 250px;
+      background: #111;
+      margin-top: 20px;
+      border-radius: 6px;
+      position: relative;
+    }
+    .btn-cpu {
+      width: 20px;
+      height: 20px;
+      background: #4285f4;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .teclado {
+      width: 320px;
+      height: 100px;
+      background: #222;
+      margin-top: 25px;
+      border-radius: 6px;
+      display: grid;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: repeat(14, 1fr);
+      gap: 4px;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .tecla {
+      background: #444;
+      border-radius: 3px;
+    }
+
+    .mouse {
+      width: 60px;
+      height: 100px;
+      background: #222;
+      border-radius: 30px;
+      margin-top: 25px;
+      position: relative;
+    }
+    .rueda {
+      width: 8px;
+      height: 20px;
+      background: #666;
+      border-radius: 4px;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="monitor"></div>
+  <div class="soporte"></div>
+  <div class="base-monitor"></div>
+  <div class="cpu">
+    <div class="btn-cpu"></div>
+  </div>
+  <div class="teclado">
+    <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+    <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+    <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+    <div class="tecla"></div><div class="tecla"></div>
+  </div>
+
+  <div class="mouse">
+    <div class="rueda"></div>
+  </div>
+</body>
+</html>
