@@ -1,27 +1,106 @@
-<!Doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .container { 
-        display: flex; 
-        flex-wrap: wrap; 
-        background: steelblue; 
-        width: 200px;
-        } 
-        .item { 
-            background-color: yellow;
-            width: 50%;
-        }
-
-                    </style>
-
-    <div class="container"><!--Flex container -->
-        <div class="item item-1">1</div><!--Flex items-->
-        <div class="item item-2">2</div>
-        <div class="item item-3">3</div>
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructura de Página</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: white;
+    }
+    .contenedor {
+      width: 900px;
+      height: 500px;
+      border: 3px solid #8B0000;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .encabezado {
+      border: 3px solid #8B0000;
+      height: 120px;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px;
+    }
+    .logo {
+      border: 3px solid #8B0000;
+      width: 220px;
+      height: 60px;
+    }
+    .barra {
+      flex: 1;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .barra-superior {
+      border: 3px solid #8B0000;
+      height: 25px;
+    }
+    .botones {
+      display: flex;
+      justify-content: flex-start;
+      gap: 15px;
+    }
+    .boton {
+      border: 3px solid #8B0000;
+      width: 80px;
+      height: 20px;
+    }
+    .contenido {
+      display: flex;
+      gap: 10px;
+    }
+    .lateral {
+      border: 3px solid #8B0000;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 10px;
+      box-sizing: border-box;
+      gap: 10px;
+    }
+    .bloque {
+      border: 3px solid #8B0000;
+      height: 30px;
+    }
+    .principal {
+      border: 3px solid #8B0000;
+      flex: 1;
+      height: 300px;
+    }
+  </style>
 </head>
+<body>
+  <div class="contenedor">
+    <div class="encabezado">
+      <div class="logo"></div>
+      <div class="barra">
+        <div class="barra-superior"></div>
+        <div class="botones">
+          <div class="boton"></div>
+          <div class="boton"></div>
+          <div class="boton"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contenido">
+      <div class="lateral">
+        <div class="bloque"></div>
+        <div class="bloque"></div>
+      </div>
+      <div class="principal"></div>
+    </div>
+  </div>
+</body>
 </html>
