@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> - Perfil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --rosa: #dd5683;
+            --morado: #d476e5;
+            --rosa-claro: #f8bbd9;
+            --morado-claro: #e1bee7;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar-custom {
+            background: linear-gradient(135deg, var(--morado), var(--rosa));
+        }
+        
+        .profile-header {
+            background: linear-gradient(135deg, var(--morado), var(--rosa));
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border: 4px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--morado);
+        }
+        
+        .card-header {
+            background-color: white;
+            border-bottom: 1px solid var(--rosa-claro);
+            font-weight: 600;
+            color: var(--morado);
+        }
+        
+        .progress {
+            height: 10px;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-bar {
+            background: linear-gradient(90deg, var(--morado), var(--rosa));
+        }
+        
+        .badge-custom {
+            background: linear-gradient(135deg, var(--morado), var(--rosa));
+            color: white;
+        }
+        
+        .btn-custom {
+            background: linear-gradient(135deg, var(--morado), var(--rosa));
+            color: white;
+            border: none;
+        }
+        
+        .btn-custom:hover {
+            background: linear-gradient(135deg, var(--rosa), var(--morado));
+            color: white;
+        }
+        
+        .social-icon {
+            color: var(--morado);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: var(--rosa);
+        }
+        
+        .interest-item {
+            background-color: var(--morado-claro);
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-person-circle me-2"></i>Julissa Mestas
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header del Perfil -->
+    <div class="profile-header">
+        <div class="container text-center">
+            <img src="/HTML/Captura de pantalla 2025-10-22 171220.png" 
+                 alt="jm" class="profile-img rounded-circle mb-3">
+            <h1 class="display-5 fw-bold">Julissa Esther Mestas Huanca</h1>
+            <p class="lead">Estudiante de Ingeniería de Sistemas</p>
+            <span class="badge badge-custom p-2">Universidad Nacional del Altiplano de Puno</span>
+            <p class="mt-2">Tercer Semestre</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- Columna principal -->
+            <div class="col-lg-8">
+                <!-- Sobre Mí -->
+                <div class="card" id="sobre-mi">
+                    <div class="card-header d-flex align-items-center">
+                        <i class="bi bi-person-badge me-2"></i> Sobre Mí
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Hola, mi nombre es JULISSA ESTHER MESTAS HUANCA. Soy estudiante de Ingeniería de Sistemas en la Universidad Nacional del Altiplano de Puno, actualmente curso el tercer semestre de la carrera.</p>
+                        
+                        <p class="card-text">Me considero creativa en ciertos aspectos como en la forma en que hago ceativa una pagina o un perfil sin que sea aburrido para los ojos.</p>
+                        
+                        <p class="card-text">Durante mi formación universitaria, he adquirido conocimientos en lenguajes de programación como C++, Python y HTML, además de fundamentos en análisis de sistemas. Me gusta trabajar en equipo, compartir ideas y seguir aprendiendo constantemente para mejorar mis habilidades tanto técnicas como personales.</p>
+                        
+                        <p class="card-text">En el futuro, aspiro ser una buena programadora en c++ y tener grandes conocimientos en HTML, JAVA y PHYTON, trabajar en una empresa y sea de ayuda cada uno de mis conocimientos</p>
+                    </div>
+                </div>
+
+                <!-- Habilidades -->
+                <div class="card" id="habilidades">
+                    <div class="card-header d-flex align-items-center">
+                        <i class="bi bi-tools me-2"></i> Habilidades Técnicas
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>HTML / CSS</span>
+                                <span> 56% </span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 99%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>C++ </span>
+                                <span>59%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>Python </span>
+                                <span>40%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>Bases de Datos</span>
+                                <span> 27%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra lateral -->
+            <div class="col-lg-4">
+                <!-- Intereses -->
+                <div class="card" id="intereses">
+                    <div class="card-header d-flex align-items-center">
+                        <i class="bi bi-heart me-2"></i> Áreas de Interés
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center">
+                            <span class="interest-item">Inteligencia Artificial</span>
+                            <span class="interest-item">Bases de Datos</span>
+                            <span class="interest-item">Ciberseguridad</span>
+                            <span class="interest-item">Desarrollo de Software</span>
+                            <span class="interest-item">Análisis de Sistemas</span>
+                            <span class="interest-item">Algoritmos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lenguajes -->
+                <div class="card">
+                    <div class="card-header d-flex align-items-center">
+                        <i class="bi bi-code-slash me-2"></i> Lenguajes de Programación
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                C++
+                                <span class="badge badge-custom rounded-pill">Intermedio</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Python
+                                <span class="badge badge-custom rounded-pill"> Básico</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Java
+                                <span class="badge badge-custom rounded-pill">Básico</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                JavaScript
+                                <span class="badge badge-custom rounded-pill">Básico</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contacto -->
+                <div class="card" id="contacto">
+                    <div class="card-header d-flex align-items-center">
+                        <i class="bi bi-envelope me-2"></i> Contacto
+                    </div>
+                    <div class="card-body text-center">
+                        <p>¿Quieres ponerte en contacto conmigo?</p>
+                        <button class="btn btn-custom btn-sm mb-3">Enviar Mensaje</button>
+                        
+                        <div class="mt-3">
+                            <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-envelope-fill"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3 mt-5">
+        <div class="container">
+            <p class="mb-0 text-muted">© 2025 Julissa Mestas  - Estudiante de Ingeniería de Sistemas</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
