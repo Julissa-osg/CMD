@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyectos - MiWeb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --rosa: #dd5683;
+            --morado: #d476e5;
+            --claro: #fdf0f8;
+            --texto: #444;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #ffffff, #fdf0f8);
+            color: var(--texto);
+        }
+
+        /* NAVBAR */
+        .bg-purple {
+            background: linear-gradient(135deg, var(--morado), var(--rosa));
+        }
+
+        /* HEADER */
+        .projects-header {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .projects-header h1 {
+            color: var(--morado);
+            font-weight: 700;
+        }
+
+        .projects-header p {
+            max-width: 600px;
+            margin: auto;
+            color: #666;
+        }
+
+        /* SECTION */
+        .section-title {
+            font-weight: 600;
+            color: var(--morado);
+            margin: 3rem 0 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* CARD */
+        .project-card {
+            background: white;
+            border-radius: 16px;
+            border: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: "";
+            height: 5px;
+            width: 100%;
+            background: linear-gradient(90deg, var(--morado), var(--rosa));
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            color: var(--morado);
+        }
+
+        .btn-project {
+            background: linear-gradient(135deg, var(--morado), var(--rosa));
+            color: white;
+            border-radius: 25px;
+            padding: 8px 20px;
+            border: none;
+        }
+
+        .btn-project:hover {
+            background: linear-gradient(135deg, var(--rosa), var(--morado));
+            color: white;
+        }
+
+        footer {
+            background: #fafafa;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-purple">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">MiWeb 💜</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../inicio/index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="../sobre/index.html">Sobre mí</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="../contacto/index.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<section class="projects-header">
+    <div class="container">
+        <h1>Mis Proyectos ✨</h1>
+        <p>
+            Aquí encontrarás algunos de mis trabajos, prácticas y proyectos
+            realizados durante mi aprendizaje en desarrollo web.
+        </p>
+    </div>
+</section>
+
+<div class="container">
+
+    <!-- TRABAJOS -->
+    <h3 class="section-title">
+        <i class="bi bi-briefcase-fill"></i> Trabajos
+    </h3>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card project-card p-4 text-center">
+                <i class="bi bi-file-earmark-code project-icon mb-3"></i>
+                <h5>Trabajo HTML</h5>
+                <p class="text-muted">Página web estructurada con HTML.</p>
+                <a href="../Trabajo/trabajo.html" class="btn btn-project">Ver proyecto</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card project-card p-4 text-center">
+                <i class="bi bi-laptop project-icon mb-3"></i>
+                <h5>Proyecto Laptop</h5>
+                <p class="text-muted">Diseño y estructura visual.</p>
+                <a href="../HTML/laptop.html" class="btn btn-project">Ver proyecto</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card project-card p-4 text-center">
+                <i class="bi bi-calculator project-icon mb-3"></i>
+                <h5>Calculadora</h5>
+                <p class="text-muted">Interfaz funcional básica.</p>
+                <a href="../HTML/calculadora.html" class="btn btn-project">Ver proyecto</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRACTICAS HTML -->
+    <h3 class="section-title">
+        <i class="bi bi-code-slash"></i> Prácticas 1ra unidad
+    </h3>
+    <div class="row g-4">
+        <div class="col-md-3">
+            <div class="card project-card p-3 text-center">
+                <i class="bi bi-filetype-html project-icon mb-2"></i>
+                <h6>Práctica 01</h6>
+                <a href="../HTML/01pract.html" class="btn btn-project btn-sm">Abrir</a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card project-card p-3 text-center">
+                <i class="bi bi-filetype-css project-icon mb-2"></i>
+                <h6>Flexbox</h6>
+                <a href="../HTML/flex2.html" class="btn btn-project btn-sm">Abrir</a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card project-card p-3 text-center">
+                <i class="bi bi-bootstrap project-icon mb-2"></i>
+                <h6>Bootstrap</h6>
+                <a href="../HTML/bool01.html" class="btn btn-project btn-sm">Abrir</a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card project-card p-3 text-center">
+                <i class="bi bi-code project-icon mb-2"></i>
+                <h6>JavaScript</h6>
+                <a href="../HTML/prac02.html" class="btn btn-project btn-sm">Abrir</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+
+    <h3 class="section-title">
+        <i class="bi bi-database-fill"></i> Backend & Base de Datos 2da unidad
+    </h3>
+
+    <div class="row g-4">
+
+        <div class="col-md-3">
+            <div class="card project-card p-3 text-center">
+                <i class="bi bi-arrow-repeat project-icon mb-2"></i>
+                <h6>AJAX</h6>
+                <a href="../HTML/ajax.html" class="btn btn-project btn-sm">Abrir</a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card project-card p-3 text-center">
+                <i class="bi bi-box-seam project-icon mb-2"></i>
+                <h6>CRUD CodeIgniter</h6>
+                <a href="../php/crud/index.php" class="btn btn-project btn-sm">Abrir</a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card project-card p-3 text-center">
+                <i class="bi bi-file-earmark-text project-icon mb-2"></i>
+                <h6>Consultas SQL</h6>
+                <a href="../HTML/sql.html" class="btn btn-project btn-sm">Abrir</a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card project-card p-3 text-center">
+                <i class="bi bi-hdd-network project-icon mb-2"></i>
+                <h6>Servidor Web</h6>
+                <a href="../HTML/servidor.html" class="btn btn-project btn-sm">Abrir</a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card project-card p-3 text-center">
+                <i class="bi bi-filetype-php project-icon mb-2"></i>
+                <h6>PHP</h6>
+                <a href="../php/index.php" class="btn btn-project btn-sm">Abrir</a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card project-card p-3 text-center">
+                <i class="bi bi-diagram-3 project-icon mb-2"></i>
+                <h6>BD con JavaScript</h6>
+                <a href="../HTML/bd-js.html" class="btn btn-project btn-sm">Abrir</a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card project-card p-3 text-center">
+                <i class="bi bi-bar-chart-fill project-icon mb-2"></i>
+                <h6>Reportes PHP</h6>
+                <a href="../php/reportes.php" class="btn btn-project btn-sm">Abrir</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+    © 2025 Julissa Mestas – Estudiante de Ingeniería de Sistemas
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

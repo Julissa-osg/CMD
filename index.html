@@ -2,316 +2,227 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>MiWeb - Portafolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Perfil - Estudiante de Desarrollo Web</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- ESTILOS -->
     <style>
         :root {
-            --primary-color: #a30bb1;
-            --secondary-color: #2c3e50;
-            --accent-color: #e74c3c;
-            --light-color: #dbd1e0;
-            --dark-color: #34495e;
+            --rosa: #dd5683;
+            --morado: #d476e5;
+            --claro: #fdf0f8;
+            --texto: #444;
         }
+
         body {
-            background: linear-gradient(135deg, #a5b4ca 0%, #c3cfe2 100%);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--dark-color);
-            min-height: 100vh;
-            padding-bottom: 2rem;
+            color: var(--texto);
+            background: linear-gradient(180deg, #ffffff, #fdf0f8);
         }
-        .perfil-card {
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            margin-top: 2rem;
-            transition: transform 0.3s ease;
+
+        /* NAVBAR */
+        .bg-purple {
+            background: linear-gradient(135deg, var(--morado), var(--rosa));
         }
-        
-        .perfil-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .perfil-header {
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            position: relative;
-        }
-        
-        .perfil-header img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            margin-bottom: 1rem;
-            object-fit: cover;
-        }
-        
-        .perfil-header h3 {
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-        
-        .perfil-header p {
-            opacity: 0.9;
-            margin-bottom: 0;
-        }
-        
-        .perfil-body {
-            padding: 2rem;
-        }
-        
-        .section-title {
-            color: var(--secondary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-        
-        .work-list, .exercise-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        
-        .work-list li, .exercise-list li {
-            margin-bottom: 0.8rem;
-            padding: 0.8rem;
-            border-radius: 8px;
-            background-color: var(--light-color);
-            transition: all 0.3s ease;
-        }
-        
-        .work-list li:hover, .exercise-list li:hover {
-            background-color: #d6eaf8;
-            transform: translateX(5px);
-        }
-        
-        .work-list a, .exercise-list a {
-            text-decoration: none;
-            color: var(--dark-color);
-            font-weight: 500;
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
             display: flex;
             align-items: center;
-        }
-        
-        .work-list a:hover, .exercise-list a:hover {
-            color: var(--primary-color);
-        }
-        
-        .work-list i, .exercise-list i {
-            margin-right: 10px;
-            color: var(--primary-color);
-        }        
-        .category-title {
-            color: var(--secondary-color);
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-            padding-left: 0.5rem;
-            border-left: 4px solid var(--accent-color);
-        }        
-        .badge {
-            background-color: var(--accent-color);
-            margin-left: auto;
-        }        
-        footer {
+            background: linear-gradient(135deg, var(--morado), var(--rosa));
+            color: white;
             text-align: center;
-            margin-top: 2rem;
-            color: var(--dark-color);
-            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
         }
-        
-        @media (max-width: 768px) {
-            .perfil-body {
-                padding: 1.5rem;
-            }
-            
-            .perfil-header {
-                padding: 1.5rem;
-            }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: white;
+            border-top-left-radius: 100% 80px;
+            border-top-right-radius: 100% 80px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-weight: 700;
+            font-size: 2.8rem;
+        }
+
+        .hero p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        .hero .btn {
+            border-radius: 30px;
+            padding: 10px 30px;
+            font-weight: 500;
+        }
+
+        /* SECCIONES */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-weight: 700;
+            color: var(--morado);
+            margin-bottom: 3rem;
+        }
+
+        /* CARDS */
+        .project-card {
+            background: white;
+            border-radius: 16px;
+            border: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: "";
+            height: 5px;
+            width: 100%;
+            background: linear-gradient(90deg, var(--morado), var(--rosa));
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            color: var(--morado);
+        }
+
+        .btn-project {
+            background: linear-gradient(135deg, var(--morado), var(--rosa));
+            color: white;
+            border-radius: 25px;
+            padding: 8px 22px;
+            border: none;
+        }
+
+        .btn-project:hover {
+            background: linear-gradient(135deg, var(--rosa), var(--morado));
+            color: white;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #fafafa;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 3rem;
         }
     </style>
 </head>
+
 <body>
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
-                <div class="perfil-card">
-                    <div class="perfil-header">
-                        <img src="HTML/Yulis.jpeg" alt="Foto de perfil">
-                        <h3>JULISSA</h3>
-                        <p class="mb-0">Estudiante de Sistemas GRUPO A</p>
-                    </div>
-                    
-                    <div class="perfil-body">
-                        <!-- Trabajos -->
-                        <h2 class="section-title">
-                            <i class="fas fa-briefcase"></i> Trabajos
-                        </h2>
-                        <ul class="work-list">
-                            <li>
-                                <a href="Trabajo/trabajo.html" target="_blank">
-                                    <i class="fas fa-file-alt"></i> Trabajo en HTML
-                                    <span class="badge bg-primary">Completado</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/laptop.html" target="_blank">
-                                    <i class="fas fa-laptop"></i> Trabajo Laptop
-                                    <span class="badge bg-primary">Completado</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/calculadora.html" target="_blank">
-                                    <i class="fas fa-calculator"></i> Trabajo Calculadora
-                                    <span class="badge bg-primary">Completado</span>
-                                </a>
-                            </li>                           
-                        </ul>
 
-                        <!-- Ejercicios HTML Falta -->
-                        <h2 class="section-title">
-                            <i class="fas fa-tasks"></i> Ejercicios HTML 
-                        </h2>
-                        <ul class="exercise-list">
-                            <li>
-                                <a href="HTML/01pract.html" target="_blank">
-                                    <i class="fab fa-html5"></i> Práctica HTML 01
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/02pract.html" target="_blank">
-                                    <i class="fab fa-html5"></i> Práctica HTML 02
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/03pract.html" target="_blank">
-                                    <i class="fab fa-html5"></i> Práctica HTML 03
-                                </a>
-                            </li>
-                        </ul>    
-                        
-                        <!-- Ejercicios CSS -->
-                        <h2 class="section-title">
-                            <i class="fas fa-tasks"></i> Ejercicios CSS
-                        </h2>
-                        <ul class="exercise-list">
-                                                        <li>
-                                <a href="HTML/prac1.html" target="_blank">
-                                    <i class="fab fa-html5"></i> Práctica 01
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/flex2.html" target="_blank">
-                                    <i class="fab fa-css3-alt"></i>Practica 02
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/flex3.html" target="_blank">
-                                    <i class="fab fa-css3-alt"></i> Practica 03
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/flex4.html" target="_blank">
-                                    <i class="fab fa-css3-alt"></i> Practica 04
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/HH.html" target="_blank">
-                                    <i class="fab fa-html5"></i> Practica 06
-                                </a>
-                            </li>
-                        </ul>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-purple">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">MiWeb 💜</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="HTML/sobre/index.html">Sobre mí</a></li>
+                <li class="nav-item"><a class="nav-link" href="HTML/proyectos/proyectos.html">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="HTML/contacto/index.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-                        <!-- Ejercicios Java -->
-                        <h2 class="section-title">
-                            <i class="fas fa-tasks"></i> Ejercicios Java
-                        </h2>
-                        <ul class="exercise-list">
-                            <li>
-                                <a href="HTML/prac02.html" target="_blank">
-                                    <i class="fab fa-html5"></i> Práctica 01
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/prac03.html" target="_blank">
-                                    <i class="fab fa-html5"></i> Práctica 02
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/prac04.html" target="_blank">
-                                    <i class="fab fa-html5"></i> Práctica 03
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/prac05.html" target="_blank">
-                                    <i class="fab fa-html5"></i> Práctica 04
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/prac06.html" target="_blank">
-                                    <i class="fab fa-html5"></i> Práctica 05
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- Ejercicios BOOTSTRAP -->
-                        <h2 class="section-title">
-                            <i class="fas fa-tasks"></i> Ejrcicos Boostrap
-                        </h2>
-                        <ul class="exercise-list">
-                            <li>
-                                <a href="HTML/bool01.html" target="_blank">
-                                    <i class="fab fa-html5"></i> Practica 01
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/bool02.html" target="_blank">
-                                    <i class="fab fa-html5"></i> Práctica 02
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/bool03.html" target="_blank">
-                                    <i class="fab fa-html5"></i> Práctica 03
-                                </a>
-                            </li>
-                            <li>
-                                <a href="HTML/bool04.html" target="_blank">
-                                    <i class="fab fa-html5"></i> Práctica 04
-                                </a>
-                            </li>
-                        </ul>    
-                        
-                        <!-- Páginas Principales -->
-                        <h2 class="section-title">
-                            <i class="fas fa-home"></i> Páginas Principales
-                        </h2>
-                        <ul class="exercise-list">
-                            <li>
-                                <a href="" target="_blank">
-                                    <i class="fas fa-home"></i> Página de Inicio
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/HTML/perfil.html" target="_blank">
-                                    <i class="fas fa-user"></i> Mi Perfil
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Hola, soy Julissa 💜</h1>
+        <p>
+            Estudiante de Ingeniería de Sistemas apasionada por el desarrollo web,
+            frontend y backend.
+        </p>
+        <div class="mt-4">
+            <a href="HTML/proyectos/proyectos.html" class="btn btn-light me-2">Ver proyectos</a>
+            <a href="HTML/contacto/index.html" class="btn btn-outline-light">Contacto</a>
+        </div>
+    </div>
+</section>
+
+<!-- PROYECTOS DESTACADOS -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Proyectos destacados ✨</h2>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card project-card p-4 text-center">
+                    <i class="bi bi-code-slash project-icon mb-3"></i>
+                    <h5>Desarrollo Web</h5>
+                    <p class="text-muted">HTML, CSS, Bootstrap y JavaScript.</p>
+                    <a href="HTML/proyectos/proyectos.html" class="btn btn-project">Ver más</a>
                 </div>
-                
-                <footer>
-                    <p>© 2025 Mi Perfil - </p>
-                </footer>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card p-4 text-center">
+                    <i class="bi bi-database project-icon mb-3"></i>
+                    <h5>Backend & BD</h5>
+                    <p class="text-muted">PHP, MySQL, AJAX y CodeIgniter.</p>
+                    <a href="HTML/proyectos/proyectos.html" class="btn btn-project">Ver más</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card p-4 text-center">
+                    <i class="bi bi-bar-chart-line project-icon mb-3"></i>
+                    <h5>Sistemas & Reportes</h5>
+                    <p class="text-muted">CRUD, reportes y lógica de sistemas.</p>
+                    <a href="HTML/proyectos/proyectos.html" class="btn btn-project">Ver más</a>
+                </div>
             </div>
         </div>
     </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- FOOTER -->
+<footer>
+    © 2025 Julissa Mestas – Estudiante de Ingeniería de Sistemas
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
